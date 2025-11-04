@@ -1,0 +1,40 @@
+# -------------------------
+# Configurações do editor
+# -------------------------
+.vscode/
+.idea/
+
+# -------------------------
+# Arquivos do sistema
+# -------------------------
+.DS_Store
+Thumbs.db
+
+# -------------------------
+# Logs e cache
+# -------------------------
+*.log
+*.tmp
+*.swp
+
+# -------------------------
+# Diretórios de build (caso use no futuro)
+# -------------------------
+dist/
+build/
+node_modules/
+
+# -------------------------
+# Arquivos de ambiente (para futuros testes/deploys)
+# -------------------------
+.env
+.env.local
+.env.*.local
+
+# -------------------------
+# Backups e arquivos de compressão
+# -------------------------
+*.bak
+*.zip
+*.rar
+*.7z
