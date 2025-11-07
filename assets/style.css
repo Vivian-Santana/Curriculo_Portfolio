@@ -232,19 +232,42 @@ nav {
   .container-icones {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
+    overflow: hidden;
+    white-space: nowrap;
+    /*background: #000;*/
+    padding: 20px 0;
+    margin-inline: auto;
+    mask: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
   }
 
-  .container-icones i {
+  .scroll__container{
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    width: max-content;
+    animation: scrollInfinito 10s linear infinite;
+  }
+
+  i {
     color: #09df7b;
     cursor: pointer;
     transition: transform 0.3s ease, color 0.3s ease;
   }
 
-  .container-icones i:hover {
+  i:hover {
     transform: scale(1.1);
     color: var(--cor-secundaria);
   }
+
+    .container-icones:hover .scroll__container {
+    animation-play-state: paused;
+  }
+
+}
+
+@keyframes scrollInfinito {
+  to{
+    translate: calc(-50% - 24px) /*24px metade de 3rem q é o gap entre os icones*/
+  }
+
 }
