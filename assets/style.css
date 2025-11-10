@@ -313,4 +313,242 @@ footer{
 
 }
 
+/***************************
+        RESPONSIVIDADE 
+***************************/
 
+@media(max-width: 1133px){
+  .foto-container{
+    margin-left: 3rem;
+  }
+}
+
+@media(max-width: 1038px){
+  body{
+    margin: 1rem 0 1rem 3rem;
+    padding: 0;
+  }
+}
+
+@media(max-width: 833px){
+  
+  html, body {
+    overflow-x: hidden;
+  }
+
+  body{
+    display:flex;
+    flex-direction: column;
+    margin: 3% 10% 2% 10%;
+    padding: 0;
+  }
+
+  section{
+    width: auto;
+    margin: 0;
+  }
+
+  .container-icones{}
+
+  #hero{
+    display:flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-right: 0;
+    margin-top: 3rem;
+  }
+  
+  #sobre{
+    margin-top: 0;
+  }
+
+  #skills{
+    margin: 0;
+  }
+
+  footer{
+    margin: 0;
+  }
+
+}
+
+@media(max-width: 600px){
+  
+  html, body {
+    overflow-x: hidden;
+  }
+
+  body{
+    margin: 3% 10% 2% 10%;
+  }
+  
+  #hero{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    margin-right: 0;
+    margin-top: 3rem;
+    
+    .foto-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--cor-primaria);
+      border-radius: 50%;
+      width: min(800px, 70vw); /* ajusta conforme o espaço */
+      height:  min(800px, 70vw);
+      /*width: fit-content;*/
+      padding: 0.5rem;
+      margin: 0;
+    }
+    
+    img {
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+    }
+
+  }
+
+  #skills{
+    margin: 0;
+  }
+  
+  footer{
+    display: flex;
+    justify-content: center;
+    margin: 0 -1.30rem 0 -1.30rem;
+
+      li, a{
+      width: 20px;
+      display: inline;
+    }
+
+    .footer__icones a{
+      font-size: 2rem !important;
+    }
+
+    p{
+      font-size: smaller;
+    }
+  }
+  
+}
+
+@media(max-width: 600px){
+
+  #hero{
+
+    article{
+      display: flex;
+      flex-direction: column !important;
+      flex-wrap: wrap !important; /* permite quebra se necessário */
+      
+      .tag{
+        font-size: medium;
+      }
+      
+      p{
+        font-size:medium;
+      }
+
+      .destaque{
+          font-size: medium;
+      }
+
+      .titulo{
+        font-size: 5rem;
+      }
+
+    }
+  }
+
+  #sobre, #skills{
+      h2{
+      font-size: 4rem;
+    }
+  }
+
+  #hero, #sobre{
+      margin-top: 0;
+  }
+}
+
+@media(max-width: 440px){
+
+  body{
+    margin-top: 1.5rem;
+  }
+
+  nav{
+      
+    ul{
+      gap: 1rem;
+    }
+
+    li, a{
+        font-size: small;
+      }
+    }
+
+  #hero{
+
+    article{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      
+        h1, h3 {
+        margin: 0;
+        margin-bottom: 0.3rem !important;
+        line-height: 1.2rem !important; /* ajusta a altura das próprias linhas */
+      }
+
+      .tag{
+        font-size: small;
+      }
+      
+      p{
+        font-size:small;
+      }
+
+      .destaque{
+          font-size: medium;
+      }
+
+      .titulo{
+        font-size: 3rem;
+      }
+
+      button{
+        font-size: smaller;
+      }
+
+    }
+  }
+
+  section{
+    p{
+        font-size:small;
+    }
+  }
+
+  #sobre, #skills{
+      h2{
+      font-size: 2rem;
+    }
+
+    p, li{
+      font-size: small;
+    }
+
+    padding: 1rem;
+  }
+  
+  #hero, #sobre{
+    margin-top: 0;
+  }
+}
