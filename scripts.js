@@ -9,3 +9,4 @@ elemFilhos.forEach(item =>{
     elemDuplicado.setAttribute('aria-hidden', true); //informa para o leitor de pag que o elemento Duplicado esta oculto e deve ser ignorado. 
     elemContainer.appendChild(elemDuplicado);   
 })
+
