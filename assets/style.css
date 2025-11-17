@@ -7,7 +7,7 @@
 :root {
   --cor-primaria: #9be394;
   --cor-secundaria: #5edf1d;
-  --cor-verde-musgo:#327406;
+  --cor-verde-musgo: #327406;
   --cor-fonte: aliceblue;
   --cor-fonte-2: #1a4b02;
 }
@@ -64,7 +64,8 @@ a.btn {
   font-size: 1rem;
   font-weight: 500;
   padding: 0.75rem 1.25rem;
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
   text-decoration: none;
 }
 
@@ -91,7 +92,7 @@ a.btn.projetos {
 }
 
 a.btn.projetos:hover {
-  background-color:var(--cor-verde-musgo);
+  background-color: var(--cor-verde-musgo);
   border-color: var(--cor-primaria);
   color: var(--cor-fonte);
 }
@@ -151,9 +152,9 @@ nav {
 
     /*border: 1px solid orange;*/
 
-    .tag{
+    .tag {
       font-size: 2rem;
-      font-weight:500;
+      font-weight: 500;
     }
 
     > p {
@@ -228,7 +229,7 @@ nav {
     color: var(--cor-secundaria);
   }
 
-  .material-symbols-outlined{
+  .material-symbols-outlined {
     font-size: 1.8rem;
   }
 }
@@ -246,10 +247,16 @@ nav {
     /*background: #000;*/
     padding: 20px 0;
     margin-inline: auto;
-    mask: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    mask: linear-gradient(
+      to right,
+      transparent,
+      black 15%,
+      black 85%,
+      transparent
+    );
   }
 
-  .scroll__container{
+  .scroll__container {
     display: flex;
     justify-content: space-between;
     gap: 3rem;
@@ -268,32 +275,33 @@ nav {
     color: var(--cor-secundaria);
   }
 
-    .container-icones:hover .scroll__container {
+  .container-icones:hover .scroll__container {
     animation-play-state: paused;
   }
-
 }
 
 @keyframes scrollInfinito {
-  to{
-    translate: calc(-50% - 24px) /*24px metade de 3rem q é o gap entre os icones*/
+  to {
+    translate: calc(
+      -50% - 24px
+    ); /*24px metade de 3rem q é o gap entre os icones*/
   }
-
 }
 
-footer{
-    display: flex;
-    justify-content: center;
-    /*background-color: black;*/
-    padding: 1.25rem;
-    margin: 0 -6.25rem 0 -6.25rem;
-    margin-bottom: 2rem;
+footer {
+  display: flex;
+  justify-content: center;
+  /*background-color: black;*/
+  padding: 1.25rem;
+  margin: 0 -6.25rem 0 -6.25rem;
+  margin-bottom: 2rem;
 
-    li, a{
-      display: inline;
-      list-style: none;
-      text-decoration: none;
-      margin-bottom: 0.5rem;
+  li,
+  a {
+    display: inline;
+    list-style: none;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
   }
 
   a:link,
@@ -307,96 +315,95 @@ footer{
     color: var(--cor-secundaria);
   }
 
-  .social-network{
+  .social-network {
     display: flex;
     justify-content: space-evenly;
   }
 
-  p{
+  p {
     margin-top: 0.5rem;
     align-items: center;
     color: var(--cor-primaria);
   }
-
 }
 
 /*****************************
   RESPONSIVIDADE PAG INICIAL
 ******************************/
 
-@media(max-width: 1133px){
-  .foto-container{
+@media (max-width: 1133px) {
+  .foto-container {
     margin-left: 3rem;
   }
 }
 
-@media(max-width: 1038px){
-  body{
+@media (max-width: 1038px) {
+  body {
     margin: 1rem 0 1rem 3rem;
     padding: 0;
   }
 }
 
-@media(max-width: 833px){
-  
-  html, body {
+@media (max-width: 833px) {
+  html,
+  body {
     overflow-x: hidden;
   }
 
-  body{
-    display:flex;
+  body {
+    display: flex;
     flex-direction: column;
     margin: 3% 10% 2% 10%;
     padding: 0;
   }
 
-  section{
+  section {
     width: auto;
     margin: 0;
   }
 
-  .container-icones{}
+  .container-icones {
+  }
 
-  #hero{
-    display:flex;
+  #hero {
+    display: flex;
     flex-direction: column;
     gap: 4rem;
     margin-right: 0;
     margin-top: 3rem;
   }
-  
-  #sobre{
+
+  #sobre {
     margin-top: 0;
   }
 
-  #skills{
+  #skills {
     margin: 0;
   }
 
-  footer{
+  footer {
     margin: 0;
   }
-
 }
 
-@media(max-width: 600px){
-  
-  html, body {
+@media (max-width: 600px) {
+  html,
+  body {
     overflow-x: hidden;
   }
 
-  body{
+  body {
     margin: 3% 10% 2% 10%;
   }
-  
-  #hero{
-    display:flex;
+
+  #hero {
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 4rem;
     margin-right: 0;
     margin-top: 3rem;
-    
+
     .foto-container {
       display: flex;
       align-items: center;
@@ -404,12 +411,12 @@ footer{
       border: 1px solid var(--cor-primaria);
       border-radius: 50%;
       width: min(800px, 70vw); /* ajusta conforme o espaço */
-      height:  min(800px, 70vw);
+      height: min(800px, 70vw);
       /*width: fit-content;*/
       padding: 0.5rem;
       margin: 0;
     }
-    
+
     img {
       aspect-ratio: 1/1;
       object-fit: cover;
@@ -417,145 +424,144 @@ footer{
       object-fit: cover;
       display: block;
     }
-
   }
 
-  #skills{
+  #skills {
     margin: 0;
   }
-  
-  footer{
+
+  footer {
     display: flex;
     justify-content: center;
-    margin: 0 -1.30rem 0 -1.30rem;
+    margin: 0 -1.3rem 0 -1.3rem;
 
-      li, a{
+    li,
+    a {
       width: 20px;
       display: inline;
     }
 
-    .footer__icones a{
+    .footer__icones a {
       font-size: 2rem !important;
     }
 
-    p{
+    p {
       font-size: smaller;
     }
   }
-  
 }
 
-@media(max-width: 600px){
-
-  #hero{
-
-    article{
+@media (max-width: 600px) {
+  #hero {
+    article {
       display: flex;
       flex-direction: column !important;
       flex-wrap: wrap !important; /* permite quebra se necessário */
-      
-      .tag{
+
+      .tag {
         font-size: medium;
       }
-      
-      p{
-        font-size:medium;
+
+      p {
+        font-size: medium;
       }
 
-      .destaque{
-          font-size: medium;
+      .destaque {
+        font-size: medium;
       }
 
-      .titulo{
+      .titulo {
         font-size: 5rem;
       }
-
     }
   }
 
-  #sobre, #skills{
-      h2{
+  #sobre,
+  #skills {
+    h2 {
       font-size: 4rem;
     }
   }
 
-  #hero, #sobre{
-      margin-top: 0;
+  #hero,
+  #sobre {
+    margin-top: 0;
   }
 }
 
-@media(max-width: 440px){
-
-  body{
+@media (max-width: 440px) {
+  body {
     margin-top: 1.5rem;
   }
 
-  nav{
-      
-    ul{
+  nav {
+    ul {
       gap: 1rem;
     }
 
-    li, a{
-        font-size: small;
-      }
+    li,
+    a {
+      font-size: small;
     }
+  }
 
-  #hero{
-
-    article{
+  #hero {
+    article {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      
-        h1, h3 {
+
+      h1,
+      h3 {
         margin: 0;
         margin-bottom: 0.3rem !important;
         line-height: 1.2rem !important; /* ajusta a altura das próprias linhas */
       }
 
-      .tag{
+      .tag {
         font-size: small;
       }
-      
-      p{
-        font-size:small;
+
+      p {
+        font-size: small;
       }
 
-      .destaque{
-          font-size: medium;
+      .destaque {
+        font-size: medium;
       }
 
-      .titulo{
+      .titulo {
         font-size: 3rem;
       }
 
-      button{
+      button {
         font-size: smaller;
       }
-
     }
   }
 
-  section{
-    p{
-        font-size:small;
+  section {
+    p {
+      font-size: small;
     }
   }
 
-  #sobre, #skills{
-      h2{
+  #sobre,
+  #skills {
+    h2 {
       font-size: 2rem;
     }
 
-    p, li{
+    p,
+    li {
       font-size: small;
     }
 
     padding: 1rem;
   }
-  
-  #hero, #sobre{
+
+  #hero,
+  #sobre {
     margin-top: 0;
   }
 }
@@ -563,16 +569,15 @@ footer{
 /**********************
   ESTILO PAG PROJETOS
 ***********************/
-#projetos{
-
+#projetos {
   margin-top: 4rem;
   article {
     line-height: 1.5rem;
   }
 
   p {
-      margin-bottom: 1rem;
-    }
+    margin-bottom: 1rem;
+  }
 
   h3 {
     color: var(--cor-primaria);
@@ -580,7 +585,8 @@ footer{
     margin-bottom: 1rem;
   }
 
-  h3, ul{
+  h3,
+  ul {
     display: flex;
     justify-content: center;
   }
@@ -595,22 +601,22 @@ footer{
       /* margin-bottom: 10px; */
     }
 
-      /* li:last-child {
+    /* li:last-child {
       margin-bottom: 0;
     } */
   }
 
-  .enfase a{
+  .enfase a {
     text-decoration: none;
     color: var(--cor-secundaria);
 
-    &:hover{
+    &:hover {
       text-decoration: underline;
       color: var(--cor-verde-musgo);
     }
   }
-  .slider{
-    margin:0 auto;
+  .slider {
+    margin: 0 auto;
     width: 50rem;
     height: 35rem;
     overflow: hidden;
@@ -618,141 +624,123 @@ footer{
   }
 
   /* Contêiner dos slides */
-  .slides{
+  .slides {
     width: 400%;
     height: 25rem;
     display: flex;
 
     /* Movimentação dos slides conforme o botão radio selecionado */
-      #radio1:checked ~ .first{
+    #radio1:checked ~ .first {
       margin-left: 0;
     }
-    
-    #radio2:checked ~ .first{
+
+    #radio2:checked ~ .first {
       margin-left: -25%;
     }
 
-    #radio3:checked ~ .first{
+    #radio3:checked ~ .first {
       margin-left: -50%;
     }
 
-    #radio4:checked ~ .first{
+    #radio4:checked ~ .first {
       margin-left: -75%;
     }
 
-    #radio5:checked ~ .first{
+    #radio5:checked ~ .first {
       margin-left: -100%;
     }
 
-    #radio6:checked ~ .first{
+    #radio6:checked ~ .first {
       margin-left: -125%;
     }
 
-    #radio7:checked ~ .first{
+    #radio7:checked ~ .first {
       margin-left: -150%;
     }
 
-    #radio8:checked ~ .first{
-      margin-left: -175%;
+    #radio8:checked ~ .first {
+      margin-left: -233.4%;
     }
 
-    #radio9:checked ~ .first{
-      margin-left: -200%;
+    #radio9:checked ~ .first {
+      margin-left: -400%;
     }
 
-    #radio10:checked ~ .first{
-      margin-left: -225%;
+    #radio10:checked ~ .first {
+      margin-left: -450%;
     }
 
     /* Destaque do botão ativo na navegação automática **/
-    #radio1:checked ~ .navigation-auto .auto-btn1{
-      background-color: var(--cor-primaria);
-    }
-    #radio2:checked ~ .navigation-auto .auto-btn2{
-      background-color: var(--cor-primaria);
-    }
-    #radio3:checked ~ .navigation-auto .auto-btn3{
-      background-color: var(--cor-primaria);
-    }
-    #radio4:checked ~ .navigation-auto .auto-btn4{
-      background-color: var(--cor-primaria);
-    }
-    #radio5:checked ~ .navigation-auto .auto-btn5{
-      background-color: var(--cor-primaria);
-    }
-    #radio6:checked ~ .navigation-auto .auto-btn6{
-      background-color: var(--cor-primaria);
-    }
-    #radio7:checked ~ .navigation-auto .auto-btn7{
-      background-color: var(--cor-primaria);
-    }
-    #radio8:checked ~ .navigation-auto .auto-btn8{
-      background-color: var(--cor-primaria);
-    }
-    #radio9:checked ~ .navigation-auto .auto-btn9{
-      background-color: var(--cor-primaria);
-    }
-
+    #radio1:checked ~ .navigation-auto .auto-btn1,
+    #radio2:checked ~ .navigation-auto .auto-btn2,
+    #radio3:checked ~ .navigation-auto .auto-btn3,
+    #radio4:checked ~ .navigation-auto .auto-btn4,
+    #radio5:checked ~ .navigation-auto .auto-btn5,
+    #radio6:checked ~ .navigation-auto .auto-btn6,
+    #radio7:checked ~ .navigation-auto .auto-btn7,
+    #radio8:checked ~ .navigation-auto .auto-btn8,
+    #radio9:checked ~ .navigation-auto .auto-btn9,
     #radio10:checked ~ .navigation-auto .auto-btn10{
       background-color: var(--cor-primaria);
     }
   }
 
   .projeto-links {
-      text-align: center;
-      margin-top: 4rem;
+    text-align: center;
+    margin-top: 4rem;
 
-        a {
-        padding: 0 0.5rem;
-        text-decoration: none;
-        color: var(--cor-primaria);
-        transition: color 0.3s ease;
-      }
+    a {
+      padding: 0 0.5rem;
+      text-decoration: none;
+      color: var(--cor-primaria);
+      transition: color 0.3s ease;
+    }
 
-      a:hover {
-        color: var(--cor-secundaria);
-      }
+    a:hover {
+      color: var(--cor-secundaria);
+    }
   }
 
-  .slides input{
+  .slides input {
     display: none;
   }
 
-  .slide{
+  .slide {
     width: 25%;
     position: relative;
   }
 
-  .slides img{
+  .slides img {
     width: 50rem;
   }
 
-  .navegacao-manual{
+  .navegacao-manual {
+    /* border: solid red; */
     position: absolute;
     width: 50rem;
-    margin-top: -3.438rem;
-    padding: 3rem;
+    margin-top: -2.500rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+    padding: 1.8rem;
     display: flex;
     justify-content: center;
   }
 
-  .navigation-auto{
+  .navigation-auto {
     background-color: rgb(2, 27, 16);
     border-radius: 0 0 0.5rem 0.5rem;
-    /* border: 2px solid red; */
     position: absolute;
     width: 50rem;
-    margin-top: 23.75rem; /*ajusta a posição vertical da div navigation-auto*/
+    margin-top: 23.54rem; /*ajusta a posição vertical da div navigation-auto*/
     display: flex;
     justify-content: center;
     padding: 2rem;
   }
 
-  .navigation-auto div.nav-btn:not(:last-child){
+  .navigation-auto div.nav-btn:not(:last-child) {
     margin-right: 0.5rem; /*espaço entre as divs navigation-auto para encaixar nos btns radios*/
   }
 
-  .navigation-auto div{
+  .navigation-auto div {
     border: 0.125rem solid var(--cor-primaria);
     padding: 0.313rem;
     border-radius: 0.625rem;
@@ -761,7 +749,7 @@ footer{
   }
 
   /*manual-btn sobrepoe  nav-btn auto-btn1 então deixo ele com borda transparente*/
-  .manual-btn{
+  .manual-btn {
     border: 0.125rem solid transparent;
     padding: 0.313rem;
     border-radius: 0.625rem;
@@ -769,176 +757,153 @@ footer{
     transition: 1s;
   }
 
-  .manual-btn:not(:last-child){
+  .manual-btn:not(:last-child) {
     margin-right: 0.5rem;
   }
 
-  .manual-btn:hover{
+  .manual-btn:hover {
     background-color: var(--cor-secundaria);
   }
-  .navegacao-manual div.manual-btn:not(:last-child){
+  .navegacao-manual div.manual-btn:not(:last-child) {
     margin-right: 2.5rem; /*espaço entre os btns radios dos slides*/
   }
 
   /*************************
     Carrossel mobile 
   *************************/
-  .slider-mobile{
+  .slider-mobile {
     /* background-color: red; */
-    margin:0 auto;
+    margin: 0 auto;
     margin-bottom: 10rem;
     width: 20rem;
     height: 40rem;
     overflow: hidden;
     border-radius: 0.5rem 0.5rem 0 0;
-      /*oculta inputs radios padrão*/
-      .slides-mobile input{
+    /*oculta inputs radios padrão*/
+    .slides-mobile input {
       display: none;
     }
   }
 
   /* Contêiner dos slides das imgs mobile */
-
-  .slide{
+  .slide {
     width: 50%;
     position: relative;
   }
-/* tamanho da imagem dentro do slide */
-  .slides-mobile img{
+  /* tamanho da imagem dentro do slide */
+  .slides-mobile img {
     width: 20rem;
   }
 
   /* navegacao-manual-mobile */
-  .navegacao-manual-mobile{
-    background-color: rgb(2, 27, 16);
-    border-radius: 0 0 0.5rem 0.5rem;
+  .navegacao-manual-mobile {
     position: absolute;
     width: 20rem;
-    margin-top: 35rem;
-    padding: 2.1rem;
+    margin-top: 40rem; /*ajusta a posição vertical da div navigation-auto*/
     display: flex;
     justify-content: center;
-
-      .manual-btn{
-        border: 0.125rem solid var(--cor-primaria);
-        border-radius: 0.625rem;
-        padding: 0.313rem;
-        cursor: pointer;
-        transition: 1s;
-    }
-
-    .navegacao-manual-mobile .manual-btn:not(:last-child){
-      margin-right: 0.5rem; /*espaço entre os btns radios dos slides*/
-    }
-
-    .navegacao-manual-mobile .manual-btn:hover{
-      background-color: var(--cor-secundaria);
-    }
-  
-    .navegacao-manual-mobile div.manual-btn:not(:last-child){
-      margin-right: 2.5rem; /*espaço entre os btns radios dos slides*/
-    }
-
+    padding: 2.2rem;
   }
-    .slides-mobile{
-      width: 200%;
-      height: 5rem;
-      display: flex;
 
-      /* Movimentação dos slides conforme o botão radio selecionado */
-    #radio-mob1:checked ~ .slide_first_mobile{
-        margin-left: 0;
-    }
-      
-    #radio-mob2:checked ~ .slide_first_mobile{
-      margin-left: -50%;
-    }
+  .manual-btn {
+    border: 0.125rem solid transparent;
+    border-radius: 0.625rem;
+    padding: 0.313rem;
+    cursor: pointer;
+    transition: 1s;
+  }
 
-    #radio-mob3:checked ~ .slide_first_mobile{
-      margin-left: -100%;
-    }
+  .navegacao-manual-mobile .manual-btn:not(:last-child) {
+    margin-right: 0.5rem; /*espaço entre os btns radios dos slides*/
+  }
 
-    #radio-mob4:checked ~ .slide_first_mobile{
-      margin-left: -150%;
-    }
+  .navegacao-manual-mobile .manual-btn:hover {
+    background-color: var(--cor-secundaria);
+  }
 
-    #radio-mob5:checked ~ .slide_first_mobile{
-      margin-left: -200%;
-    }
+  .navegacao-manual-mobile div.manual-btn:not(:last-child) {
+    margin-right: 2.5rem; /*espaço entre os btns radios dos slides*/
+  }
+}
+.slides-mobile {
+  width: 200%;
+  height: 5rem;
+  display: flex;
 
-    #radio-mob6:checked ~ .slide_first_mobile{
-      margin-left: -250%;
-    }
+  /* Movimentação dos slides conforme o botão radio selecionado */
+  #radio-mob1:checked ~ .slide_first_mobile {
+    margin-left: 0;
+  }
 
-    #radio-mob7:checked ~ .slide_first_mobile{
-      margin-left: -300%;
-    }
+  #radio-mob2:checked ~ .slide_first_mobile {
+    margin-left: -50%;
+  }
 
-    #radio-mob8:checked ~ .slide_first_mobile{
-      margin-left: -350%;
-    }
+  #radio-mob3:checked ~ .slide_first_mobile {
+    margin-left: -100%;
+  }
 
-    #radio-mob9:checked ~ .slide_first_mobile{
-      margin-left: -400%;
-    }
+  #radio-mob4:checked ~ .slide_first_mobile {
+    margin-left: -150%;
+  }
 
-      /* Destaque do botão ativo na navegação automática */
-      #radio-mob1:checked ~ .navigation-auto .auto-btn1{
-        background-color: var(--cor-primaria);
-      }
-      #radio-mob2:checked ~ .navigation-auto .auto-btn2{
-        background-color: var(--cor-primaria);
-      }
-      #radio-mob3:checked ~ .navigation-auto .auto-btn3{
-        background-color: var(--cor-primaria);
-      }
-      #radio-mob4:checked ~ .navigation-auto .auto-btn4{
-        background-color: var(--cor-primaria);
-      }
-      #radio-mob5:checked ~ .navigation-auto .auto-btn5{
-        background-color: var(--cor-primaria);
-      }
-      #radio-mob6:checked ~ .navigation-auto .auto-btn6{
-        background-color: var(--cor-primaria);
-      }
-      #radio-mob7:checked ~ .navigation-auto .auto-btn7{
-        background-color: var(--cor-primaria);
-      }
-      #radio-mob8:checked ~ .navigation-auto .auto-btn8{
-        background-color: var(--cor-primaria);
-      }
-      #radio-mob9:checked ~ .navigation-auto .auto-btn9{
-        background-color: var(--cor-primaria);
-      }
+  #radio-mob5:checked ~ .slide_first_mobile {
+    margin-left: -200%;
+  }
 
-    }
+  #radio-mob6:checked ~ .slide_first_mobile {
+    margin-left: -250%;
+  }
 
-     /* navegação automatica mobile */
+  #radio-mob7:checked ~ .slide_first_mobile {
+    margin-left: -300%;
+  }
 
-     #radio-mob9:checked ~ .slide_first_mobile{
-        background-color: var(--cor-primaria);
-    }
+  #radio-mob8:checked ~ .slide_first_mobile {
+    margin-left: -350%;
+  }
 
-    /*manual-btn sobrepoe  nav-btn auto-btn1 então deixo ele com borda transparente*/
-      .navigation-auto-mobile div{
-          border: 0.125rem solid var(--cor-primaria);
-          padding: 0.313rem;
-          border-radius: 0.625rem;
-          cursor: pointer;
-          transition: 1s;
-      }
-      
-      .navigation-auto-mobile{
-          position: absolute;
-          width: 20rem;
-          margin-top: 40rem; /*ajusta a posição vertical da div navigation-auto*/
-          display: flex;
-          justify-content: center;
-          padding: 0.313rem;;
-        }
+  #radio-mob9:checked ~ .slide_first_mobile {
+    margin-left: -400%;
+  }
 
-        .navigation-auto-mobile div:not(:last-child){
-          margin-right: 0.5rem; /*espaço entre as divs navigation-auto para encaixar nos btns radios*/
-        }
+  /* Destaque do botão ativo na navegação automática */
+  #radio-mob1:checked ~ .navigation-auto-mobile .auto-btn1,
+  #radio-mob2:checked ~ .navigation-auto-mobile .auto-btn2,
+  #radio-mob3:checked ~ .navigation-auto-mobile .auto-btn3 ,
+  #radio-mob4:checked ~ .navigation-auto-mobile .auto-btn4 ,
+  #radio-mob5:checked ~ .navigation-auto-mobile .auto-btn5 ,
+  #radio-mob6:checked ~ .navigation-auto-mobile .auto-btn6 ,
+  #radio-mob7:checked ~ .navigation-auto-mobile .auto-btn7 ,
+  #radio-mob8:checked ~ .navigation-auto-mobile .auto-btn8 ,
+  #radio-mob9:checked ~ .navigation-auto-mobile .auto-btn9 {
+    background-color: var(--cor-primaria);
+  }
+}
+/* navegação automatica mobile */
+#radio-mob9:checked ~ .slide_first_mobile {
+  background-color: var(--cor-primaria);
+}
 
+/*manual-btn sobrepoe  nav-btn auto-btn1 então deixo ele com borda transparente*/
+.navigation-auto-mobile div {
+  border: 0.125rem solid var(--cor-primaria);
+  padding: 0.313rem;
+  border-radius: 0.625rem;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.navigation-auto-mobile {
+  background-color: rgb(2, 27, 16);
+  border-radius: 0 0 0.5rem 0.5rem;
+  position: absolute;
+  width: 20rem;
+  margin-top: 40rem;
+  padding: 2.1rem;
+  display: flex;
+  justify-content: center;
+}
+.navigation-auto-mobile div:not(:last-child) {
+  margin-right: 0.5rem; /*espaço entre as divs navigation-auto para encaixar nos btns radios*/
 }
