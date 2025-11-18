@@ -615,79 +615,87 @@ footer {
       color: var(--cor-verde-musgo);
     }
   }
+
+  /* só aparece em telas mobile*/
+ .img-vidaPlus-mobile{
+    display: none;
+ }
+
   .slider {
-    margin: 0 auto;
-    width: 50rem;
-    height: 35rem;
+    width: 100%;
+    max-width: 840px;
     overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 7rem;
     border-radius: 0.5rem 0.5rem 0 0;
   }
 
   /* Contêiner dos slides */
   .slides {
-    width: 400%;
-    height: 25rem;
     display: flex;
+    width: 1000%; /* para 10 slides */
+    transition: transform 0.5s linear;
+ }
 
-    /* Movimentação dos slides conforme o botão radio selecionado */
-    #radio1:checked ~ .first {
-      margin-left: 0;
-    }
+ /* Movimentação dos slides conforme o botão radio selecionado */
+    #radio1:checked ~ .slides {
+  transform: translateX(0%);
+}
 
-    #radio2:checked ~ .first {
-      margin-left: -25%;
-    }
+#radio2:checked ~ .slides {
+  transform: translateX(-10%);
+}
 
-    #radio3:checked ~ .first {
-      margin-left: -50%;
-    }
+#radio3:checked ~ .slides {
+  transform: translateX(-20%);
+}
 
-    #radio4:checked ~ .first {
-      margin-left: -75%;
-    }
+#radio4:checked ~ .slides {
+  transform: translateX(-30%);
+}
 
-    #radio5:checked ~ .first {
-      margin-left: -100%;
-    }
+#radio5:checked ~ .slides {
+  transform: translateX(-40%);
+}
 
-    #radio6:checked ~ .first {
-      margin-left: -125%;
-    }
+#radio6:checked ~ .slides {
+  transform: translateX(-50%);
+}
 
-    #radio7:checked ~ .first {
-      margin-left: -150%;
-    }
+#radio7:checked ~ .slides {
+  transform: translateX(-60%);
+}
 
-    #radio8:checked ~ .first {
-      margin-left: -233.4%;
-    }
+#radio8:checked ~ .slides {
+  transform: translateX(-70%);
+}
 
-    #radio9:checked ~ .first {
-      margin-left: -400%;
-    }
+#radio9:checked ~ .slides {
+  transform: translateX(-80%);
+}
 
-    #radio10:checked ~ .first {
-      margin-left: -450%;
-    }
+#radio10:checked ~ .slides {
+  transform: translateX(-90%);
+}
 
-    /* Destaque do botão ativo na navegação automática **/
-    #radio1:checked ~ .navigation-auto .auto-btn1,
-    #radio2:checked ~ .navigation-auto .auto-btn2,
-    #radio3:checked ~ .navigation-auto .auto-btn3,
-    #radio4:checked ~ .navigation-auto .auto-btn4,
-    #radio5:checked ~ .navigation-auto .auto-btn5,
-    #radio6:checked ~ .navigation-auto .auto-btn6,
-    #radio7:checked ~ .navigation-auto .auto-btn7,
-    #radio8:checked ~ .navigation-auto .auto-btn8,
-    #radio9:checked ~ .navigation-auto .auto-btn9,
-    #radio10:checked ~ .navigation-auto .auto-btn10{
-      background-color: var(--cor-primaria);
-    }
+/* Destaque do botão ativo na navegação automática*/
+  #radio1:checked ~ .navigation-auto .auto-btn1,
+  #radio2:checked ~ .navigation-auto .auto-btn2,
+  #radio3:checked ~ .navigation-auto .auto-btn3,
+  #radio4:checked ~ .navigation-auto .auto-btn4,
+  #radio5:checked ~ .navigation-auto .auto-btn5,
+  #radio6:checked ~ .navigation-auto .auto-btn6,
+  #radio7:checked ~ .navigation-auto .auto-btn7,
+  #radio8:checked ~ .navigation-auto .auto-btn8,
+  #radio9:checked ~ .navigation-auto .auto-btn9,
+  #radio10:checked ~ .navigation-auto .auto-btn10{
+    background-color: var(--cor-primaria);
   }
 
   .projeto-links {
     text-align: center;
-    margin-top: 4rem;
+    margin-top: 7rem;
 
     a {
       padding: 0 0.5rem;
@@ -701,33 +709,42 @@ footer {
     }
   }
 
-  .slides input {
+  .slider input {
     display: none;
   }
 
   .slide {
-    width: 25%;
-    position: relative;
-  }
+  width: 100%; /* cada slide ocupa 100% da largura do .slider */
+  flex-shrink: 10;
+}
 
   .slides img {
     width: 50rem;
+    border-radius: 0 .5rem 0 0;
   }
 
   .navegacao-manual {
-    /* border: solid red; */
+    background-color: rgb(2, 27, 16);
+    border-radius: 0 0 0.5rem 0.5rem;
     position: absolute;
     width: 50rem;
-    margin-top: -2.500rem;
-    border-radius: 0 0 0.5rem 0.5rem;
+    margin-top: -0.5rem;
     padding: 1.8rem;
     display: flex;
     justify-content: center;
+
+    /* radio manual de mudar as imgs*/
+    label.manual-btn {
+      border: 0.125rem solid var(--cor-primaria);
+      padding: 0.313rem;
+      border-radius: 0.625rem;
+      cursor: pointer;
+      transition: 1s;
+    }
   }
 
+  /* navegação automática */
   .navigation-auto {
-    background-color: rgb(2, 27, 16);
-    border-radius: 0 0 0.5rem 0.5rem;
     position: absolute;
     width: 50rem;
     margin-top: 23.54rem; /*ajusta a posição vertical da div navigation-auto*/
@@ -741,7 +758,7 @@ footer {
   }
 
   .navigation-auto div {
-    border: 0.125rem solid var(--cor-primaria);
+    border: 0.125rem solid transparent;
     padding: 0.313rem;
     border-radius: 0.625rem;
     cursor: pointer;
@@ -906,4 +923,61 @@ footer {
 }
 .navigation-auto-mobile div:not(:last-child) {
   margin-right: 0.5rem; /*espaço entre as divs navigation-auto para encaixar nos btns radios*/
+}
+
+/************************************
+    RESPONSIVIDADE PAG PROJETOS
+*************************************/
+@media (max-width: 990px) and (min-width: 836px) {
+  body{
+    margin: 1rem 2rem 1rem 2rem;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+
+  .slider {
+  width: 100%;
+  max-width: 45rem; /* ou ajuste conforme necessário */
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  width: 1000%; /* 10 slides = 1000% */
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  width: 100%; /* cada slide ocupa 100% da largura do .slider */
+  flex-shrink: 0;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+}
+
+@media (max-width: 700px) and (min-width: 200px) {
+
+  .slides .img-vidaPlus-mobile{
+    display: inline-block;
+    width: 100%;
+    height: auto;
+ }
+
+ div.slider{
+  display: none;
+ }
+
 }
