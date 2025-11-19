@@ -634,7 +634,7 @@ footer {
 
   .slider {
     width: 100%;
-    max-width: 840px;
+    max-width: 100%;
     overflow: hidden;
     position: relative;
     margin: 0 auto;
@@ -725,12 +725,14 @@ footer {
   }
 
   .slide {
-  width: 100%; /* cada slide ocupa 100% da largura do .slider */
-  flex-shrink: 10;
+  width: 10%; /* cada slide ocupa 100% da largura do .slider */
+  flex-shrink: 1;
 }
 
   .slides img {
-    width: 50rem;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
     border-radius: 0 .5rem 0 0;
   }
 
@@ -738,7 +740,9 @@ footer {
     background-color: rgb(2, 27, 16);
     border-radius: 0 0 0.5rem 0.5rem;
     position: absolute;
-    width: 50rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     margin-top: -0.5rem;
     padding: 1.8rem;
     display: flex;
@@ -757,7 +761,9 @@ footer {
   /* navegação automática */
   .navigation-auto {
     position: absolute;
-    width: 50rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     margin-top: 23.54rem; /*ajusta a posição vertical da div navigation-auto*/
     display: flex;
     justify-content: center;
@@ -945,7 +951,7 @@ footer {
     padding-left: 2rem;
     display: flex;
     justify-content: center;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
     box-sizing: border-box;
   }
 
@@ -954,6 +960,17 @@ footer {
       margin-left: 2rem;
     }
   }
+
+  .slides img {
+    border-radius: 0.5rem;
+  }
+
+  .navigation-auto,
+  .navegacao-manual {
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+
 
   .slider {
   width: 100%;
@@ -1013,19 +1030,21 @@ html, body {
  }
 
  div.slider{
-  /* display: none; */
   margin: 0 auto;
-  margin-bottom: 10rem;
-  width: 20rem;
-  height: 30rem;
+  width: 100%;
+  height: auto;
   overflow: hidden;
   border-radius: 0.5rem 0.5rem 0 0;
-  /*oculta inputs radios padrão*/
+  
  }
 
  #projetos {
     padding-bottom: 3rem;
     margin-top: 0;
+
+    .slider{
+      margin-bottom: auto;
+    }
 
     h2{
       font-size: 2.5rem;
@@ -1053,12 +1072,13 @@ html, body {
     }
 
     div.projeto-links{
-      
+      display: flex;
+      justify-content: center;
       padding: 0;
-      margin: 100px;
+      margin: 6rem 0 3rem 0;
 
       a{
-        border: solid red;
+        font-size: medium;
         color: var(--cor-primaria);
       }
     }
