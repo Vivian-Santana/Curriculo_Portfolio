@@ -339,7 +339,7 @@ footer {
 
 @media (max-width: 1038px) {
   body {
-    margin: 1rem 0 1rem 3rem;
+    margin: 1rem;
     padding: 0;
   }
 }
@@ -497,11 +497,8 @@ footer {
   }
 }
 
-@media (max-width: 440px) {
-  body {
-    margin-top: 1.5rem;
-  }
-
+@media (max-width: 440px) and (min-width: 200px) {
+ 
   nav {
     ul {
       gap: 1rem;
@@ -568,7 +565,7 @@ footer {
       font-size: small;
     }
 
-    padding: 1rem;
+    padding: 0.5rem 0 1rem 0;
   }
 
   #hero,
