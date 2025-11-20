@@ -14,7 +14,7 @@ function nextImageDesktop(){
     document.getElementById("radio"+count).checked = true;
 }
 
-// Slide automático da galeria mobile
+/*Slide automático da galeria mobile*/
 let conta = 1;
 document.getElementById("radio-mob1").checked = true;
 
@@ -29,3 +29,4 @@ function nextImageMobile() {
     }
     document.getElementById("radio-mob" + conta).checked = true;
 }
+
