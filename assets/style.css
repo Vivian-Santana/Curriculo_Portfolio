@@ -914,7 +914,7 @@ footer {
 /************************************
     RESPONSIVIDADE PAG PROJETOS
 *************************************/
-@media (max-width: 990px) and (min-width: 836px) {
+@media (max-width: 900px) and (min-width: 899px) {
   body{
     margin: 1rem 2rem 1rem 2rem;
     padding-left: 2rem;
@@ -1051,8 +1051,13 @@ html, body {
       }
     }
     
-    .slider-mobile{
-      width: ;
+    .navigation-auto{
+      padding: 1rem;
+    }
+    
+    .navegacao-manual{
+      margin-top: -0.7rem; 
+      padding: 1rem;
     }
   }
 
