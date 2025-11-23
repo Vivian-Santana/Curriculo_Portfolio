@@ -701,6 +701,7 @@ footer {
   }
 
   .navegacao-manual {
+    border: solid transparent;
     border-radius: 0 0 0.5rem 0.5rem;
     position: absolute;
     width: 100%;
@@ -738,8 +739,8 @@ footer {
   }
 /*radio q avança conforme as imgs do carrossel*/
   .navigation-auto .nav-btn{
-  margin-top: 0.20rem;
-  margin-right: 0.50rem;
+  margin-top: 0.35rem;
+  margin-right: 0.47rem;
   padding: 0.270rem;
   border-radius: 0.625rem;
 }
@@ -864,10 +865,11 @@ footer {
 
 .navigation-auto-mobile div{
     border: 0.125rem solid transparent;
-    padding: 0.313rem;
+    padding: 0.280rem;
     border-radius: 0.625rem;
     cursor: pointer;
     transition: 1s;
+    margin-right: 0.580rem;
 }
 
 .navigation-auto-mobile{
@@ -878,20 +880,14 @@ footer {
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
-    margin-top: -0.320rem; /* -0.4rem; ajusta a posição vertical da div navigation-auto*/
+    margin-top: -0.330rem; /* -0.4rem; ajusta a posição vertical da div navigation-auto*/
     display: flex;
     justify-content: center;
     padding: 1.5rem;
     padding-left: 1.98rem;
-} 
-
-.navigation-auto-mobile .nav-btn{
-  margin-right: 0.491rem;
-  padding: 0.318rem;
-  border-radius: 0.625rem;
 }
 
-/* Destaca o ponto ativo */
+/* Destaca o ponto ativo radio q vai se movendo*/
 #radio-mob1:checked ~ .slides-mobile { transform: translateX(0%); }
 #radio-mob2:checked ~ .slides-mobile { transform: translateX(-100%); }
 #radio-mob3:checked ~ .slides-mobile { transform: translateX(-200%); }
