@@ -1051,6 +1051,10 @@ html, body {
       }
     }
     
+    .slides{
+      margin-bottom: 0.519rem;
+    }
+
     .navigation-auto{
       padding: 1rem;
     }
