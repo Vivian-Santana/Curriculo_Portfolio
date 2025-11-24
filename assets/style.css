@@ -50,8 +50,7 @@ body {
   color: var(--cor-fonte);
   font-family: "Roboto Flex", sans-serif;
   font-weight: 400;
-  padding: 0 6.25rem;
-  margin-top: 1.875rem;
+  margin: 1.875rem 6.25rem 0 6.25rem;
 }
 
 /* Estilo base para botões e links estilo botão */
@@ -339,7 +338,7 @@ footer {
 
 @media (max-width: 1038px) {
   body {
-    margin: 1rem;
+    margin: 3rem;
     padding: 0;
   }
 }
@@ -577,6 +576,11 @@ footer {
 /**********************
   ESTILO PAG PROJETOS
 ***********************/
+html, body{
+  overflow-x: hidden;
+}
+
+
 #projetos {
   margin-top: 4rem;
   article {
@@ -631,8 +635,11 @@ footer {
     overflow: hidden;
     position: relative;
     margin: 0 auto;
-    margin-bottom: 7rem;
     border-radius: 0.5rem 0.5rem 0 0;
+    /* só aqui os icones de links do projeto tem uma margem maior para não ficar escondido atrás do carrossel*/
+    .projeto-links{
+      margin-top: 9rem;
+    }
   }
 
   /* Contêiner dos slides */
@@ -670,7 +677,6 @@ footer {
 
   .projeto-links {
     text-align: center;
-    margin-top: 7rem;
 
     a {
       padding: 0 0.5rem;
@@ -784,7 +790,7 @@ footer {
 .slider-mobile {
   width: 100%;
   max-width: 320px; /* tamanho ideal para imagens mobile */
-  margin: 0 auto 10rem;
+  margin: 0 auto;
   padding-bottom: 5rem;
   overflow: hidden;
   position: relative;
@@ -910,6 +916,81 @@ footer {
 #radio-mob9:checked ~ .navigation-auto-mobile .auto-btn9 {
   background-color: var(--cor-primaria);
 }
+/* -------------------------------------
+ Fim da estilização dos carroseis
+ continuação da estilização de projetos
+---------------------------------------*/
+
+.projeto-links{
+    margin: 4rem 0 4rem 0;
+  }
+
+  .Alura_Books
+  .HBCard{
+    display: flex;
+    flex-direction: column;
+  }
+  
+article ul{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.loginPage img{
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.Alura_Books{
+
+    .imgs{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+  .mobile{
+    max-width: 320px; /* tamanho ideal para imagens mobile */
+  }
+}
+
+.HBCard{
+
+  .imgs{
+    display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .cardFechado{
+    width: 30%;
+    border-radius: 1rem;
+  }
+
+  .cardAberto{
+    width: 50%;
+    border-radius: 1rem;
+  }
+  
+}
+
+.Alura_Books
+.Alura_Plus
+.FlexTurismos
+.calculadora{
+  img{
+    width: 100%;
+  }
+}
+
+ img{ 
+    width: 100%;
+  }
+
+
 
 /************************************
     RESPONSIVIDADE PAG PROJETOS
@@ -974,7 +1055,7 @@ html, body {
 @media (max-width: 700px) and (min-width: 200px) {
 
   body{
-    margin: 1.5rem 3rem 1.5rem 3rem;
+    /* margin: 1.5rem 3rem 1.5rem 3rem; */
     padding: 0;
     display: flex;
     justify-content: center;
@@ -1063,6 +1144,17 @@ html, body {
       margin-top: -0.7rem; 
       padding: 1rem;
     }
+
+    padding-bottom: 0;
+
+    div.projeto-links{
+      margin: 2rem 0 2rem 0;
+  }
+
+    .slider .projeto-links{
+        margin: 5rem 0 3rem 0;
+    }
+
   }
 
   .slider-mobile {
