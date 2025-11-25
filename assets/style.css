@@ -34,7 +34,6 @@
 
 ul,
 li {
-  list-style: none;
   margin: 0;
   padding: 0;
 }
@@ -119,6 +118,7 @@ nav {
     gap: 1.25rem;
     justify-content: center;
     cursor: pointer;
+    list-style: none;
   }
 
   li,
@@ -361,9 +361,6 @@ footer {
     margin: 0;
   }
 
-  .container-icones {
-  }
-
   #hero {
     display: flex;
     flex-direction: column;
@@ -431,35 +428,7 @@ footer {
       object-fit: cover;
       display: block;
     }
-  }
 
-  #skills {
-    margin: 0;
-  }
-
-  footer {
-    display: flex;
-    justify-content: center;
-    margin: 0 -1.3rem 0 -1.3rem;
-
-    li,
-    a {
-      width: 20px;
-      display: inline;
-    }
-
-    .footer__icones a {
-      font-size: 2rem !important;
-    }
-
-    p {
-      font-size: smaller;
-    }
-  }
-}
-
-@media (max-width: 600px) {
-  #hero {
     article {
       display: flex;
       flex-direction: column !important;
@@ -483,6 +452,10 @@ footer {
     }
   }
 
+  #skills {
+    margin: 0;
+  }
+
   #sobre,
   #skills {
     h2 {
@@ -493,6 +466,26 @@ footer {
   #hero,
   #sobre {
     margin-top: 0;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+    margin: 0 -1.3rem 0 -1.3rem;
+
+    li,
+    a {
+      width: 20px;
+      display: inline;
+    }
+
+    .footer__icones a {
+      font-size: 2rem !important;
+    }
+
+    p {
+      font-size: smaller;
+    }
   }
 }
 
@@ -530,7 +523,7 @@ footer {
       }
 
       p {
-        font-size: small;
+        font-size: medium;
       }
 
       .destaque {
@@ -595,7 +588,7 @@ html, body{
   h3 {
     color: var(--cor-primaria);
     font-size: 1.5rem;
-    margin-bottom: 1rem;
+    margin: 5rem 0 1rem 0;
   }
 
   h3,
@@ -1106,12 +1099,11 @@ html, body {
 
     h3 {
       font-size: 1.2rem;
+      margin: 2rem 0 1rem 0;
     }
 
     ul, p, li{
-      display: flex;
-      flex-wrap: wrap;
-      font-size: small;
+      font-size: medium;
     }
 
     ul {
@@ -1119,6 +1111,11 @@ html, body {
         list-style: disc;
       }
     }
+
+      .cardFechado,
+      .cardAberto{
+        width: 90%;
+      }
 
     div.projeto-links{
       display: flex;
