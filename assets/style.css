@@ -231,6 +231,9 @@ nav {
   }
 
   ul {
+    display: flex;
+    flex-direction: column;
+    
     li {
       list-style: disc;
       margin-left: 1rem;
