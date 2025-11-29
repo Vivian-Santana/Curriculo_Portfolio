@@ -54,7 +54,7 @@ body {
 }
 
 main{
-  margin: 0rem 6.25rem 0 6.25rem;
+  margin: 10rem 6.25rem 0 6.25rem;
 }
 
 /* Estilo base para botões e links estilo botão */
@@ -127,8 +127,9 @@ nav {
   position: fixed;
   z-index: 1;
 
-  img{
-    width: 9%;
+  .logo{
+    width: 3rem;
+    height: auto;
     justify-self: start;
   }
 
@@ -372,9 +373,24 @@ footer {
     margin-left: 3rem;
   }
 
-  nav img{
-      width: 10% !important;
-  }
+  .logo{
+      width: 1.5rem !important;
+      height: auto;
+    }
+}
+
+@media (max-width: 1132px) and (min-width: 992px){
+  .logo{
+      width: 2.5rem !important;
+      height: auto;
+    }
+}
+
+@media(max-width:993px) and (min-width:439px){
+  .logo{
+      width: 2rem !important;
+      height: auto;
+    }
 }
 
 @media (max-width: 993px) {
@@ -419,9 +435,17 @@ footer {
   }
 }
 
-@media(max-width:500px) and (min-width:700px) {
-  nav img{
-      width: 20% !important;
+@media (max-width: 670px) and (min-width:629px){
+
+  main{
+   margin: 0 4.25rem 0 4.25rem;
+  }
+
+  #hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     gap: 4rem;
   }
 }
 
@@ -431,16 +455,8 @@ footer {
     overflow-x: hidden;
   }
 
-  nav img{
-    width: 20% !important;
-  }
-
   main{
    margin: 0 4.25rem 0 4.25rem;
-  }
-
-  header img{
-    width: 10%;
   }
 
   nav ul, li{
@@ -548,11 +564,13 @@ footer {
     margin: 0 2.5rem 0 2.5rem;
   }
 
-  nav img{
-      width: 40% !important;
-  }
-
   nav {
+
+    .logo{
+      width: 2rem !important;
+      height: auto;
+    }
+
     ul {
       gap: 1rem;
     }
@@ -560,10 +578,6 @@ footer {
     li, a {
       font-size: large;
     }
-  }
-
-  header img{
-    width: 15%;
   }
 
   #hero {
@@ -632,10 +646,6 @@ footer {
 ***********************/
 html, body{
   overflow-x: hidden;
-}
-
-main{
-  margin-top: 7rem;
 }
 
 #projetos {
@@ -1047,8 +1057,6 @@ article ul{
     width: 100%;
   }
 
-
-
 /************************************
     RESPONSIVIDADE PAG PROJETOS
 *************************************/
@@ -1146,7 +1154,6 @@ html, body {
   height: auto;
   overflow: hidden;
   border-radius: 0.5rem 0.5rem 0 0;
-  
  }
 
  #projetos {
