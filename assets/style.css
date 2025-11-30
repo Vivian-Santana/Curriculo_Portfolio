@@ -16,7 +16,7 @@
 #hero,
 #sobre,
 #skills,
-#projetos {
+.projetos {
   padding: 3rem 0;
 
   p,
@@ -71,6 +71,13 @@ a.btn {
     border-color 0.3s ease;
   text-decoration: none;
 }
+  
+.container-btn{
+  display: flex;
+  justify-content: start;
+  gap: 0.625rem;
+  align-items: end;
+}
 
 /* Botão "Contato" */
 a.btn.contato {
@@ -87,14 +94,14 @@ a.btn.contato:hover {
 
 /* Botão "Projetos" */
 
-a.btn.projetos {
+a.btn.btnProjetos {
   background-color: transparent;
   border: 1px solid var(--cor-primaria);
   color: var(--cor-secundaria);
   font-weight: bold;
 }
 
-a.btn.projetos:hover {
+a.btn.btnProjetos:hover {
   background-color: var(--cor-verde-musgo);
   border-color: var(--cor-primaria);
   color: var(--cor-fonte);
@@ -648,7 +655,7 @@ html, body{
   overflow-x: hidden;
 }
 
-#projetos {
+.projetos {
   margin-top: 4rem;
   article {
     line-height: 1.5rem;
@@ -716,6 +723,17 @@ html, body{
     transition: transform 0.5s linear;
  }
 }
+
+#prototipos{
+  .fa-brands.fa-figma{
+    font-weight: 900;
+  }
+
+  img{
+    border-radius: 0.5rem;
+  }
+}
+
  /* Movimentação dos slides conforme o botão radio selecionado */
 #radio1:checked ~ .slides {transform: translateX(0%);}
 #radio2:checked ~ .slides {transform: translateX(-10%);}
@@ -1070,7 +1088,7 @@ article ul{
     box-sizing: border-box;
   }
 
-  #projetos {
+  .projetos {
     h2, p{
       margin-left: 2rem;
     }
@@ -1156,7 +1174,7 @@ html, body {
   border-radius: 0.5rem 0.5rem 0 0;
  }
 
- #projetos {
+  .projetos {
     padding-bottom: 3rem;
     margin-top: 0;
 
@@ -1165,7 +1183,7 @@ html, body {
     }
 
     h2{
-      font-size: 2.5rem;
+      font-size: 2.5rem !important;
     }
 
     h2, p{
