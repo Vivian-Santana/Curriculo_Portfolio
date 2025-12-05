@@ -16,7 +16,8 @@
 #hero,
 #sobre,
 #skills,
-.projetos {
+.projetos,
+#contato {
   padding: 3rem 0;
 
   p,
@@ -332,13 +333,11 @@ nav {
   }
 }
 
-footer {
-  display: flex;
-  justify-content: center;
-  /*background-color: black;*/
-  padding: 1.25rem;
-  margin: 0 -6.25rem 0 -6.25rem;
-  margin-bottom: 2rem;
+#contato {
+
+  p{
+    color: var(--cor-fonte);
+  }
 
   li,
   a {
@@ -346,11 +345,12 @@ footer {
     list-style: none;
     text-decoration: none;
     margin-bottom: 0.5rem;
+
   }
 
   a:link,
   a:visited {
-    color: rgb(50, 116, 6);
+    color: var(--cor-terciaria);
     text-decoration: none;
   }
 
@@ -360,9 +360,16 @@ footer {
   }
 
   .social-network {
-    display: flex;
-    justify-content: space-evenly;
+    margin-top: 2rem;
+    /* justify-content: space-evenly; */
+    gap: 2rem;
   }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 1.25rem;
 
   p {
     margin-top: 0.5rem;
