@@ -315,9 +315,10 @@ nav {
     color: var(--cor-secundaria);
   }
 
-  .container-icones:hover .scroll__container {
+   .container-icones:hover .scroll__container {
     animation-play-state: paused;
-  }
+  } 
+
 }
 
 @keyframes scrollInfinito {
@@ -376,6 +377,13 @@ footer {
 /*****************************
   RESPONSIVIDADE PAG INICIAL
 ******************************/
+/* Em telas menores o scroll horizontal de skills não pausa */
+@media (max-width: 768px) {
+  .container-icones:hover .scroll__container {
+    animation-play-state: running !important;
+  }
+}
+
 
 @media (max-width: 1133px){
   .foto-container {
