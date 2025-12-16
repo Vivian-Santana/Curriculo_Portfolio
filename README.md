@@ -1,5 +1,4 @@
 # Portfólio
----
 
 ## Tecnologias Utilizadas
 
