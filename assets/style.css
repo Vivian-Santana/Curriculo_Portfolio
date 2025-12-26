@@ -129,6 +129,11 @@ nav {
   position: fixed;
   z-index: 1;
 
+  .clicado{
+    color: var(--cor-secundaria);
+    font-weight: bold;
+  }
+
   .logo{
     width: 2rem;
     height: auto;
