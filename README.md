@@ -8,10 +8,9 @@
 - Responsividade com Media Query
 - Animação com keyframes
 
-###
-![Screenshot print da home](./img-readme/web.png)
+---
 
-![Screenshot print da home](./img-readme/nestHub.png)
+![Screenshot print da home](./img-readme/web.png)
 
 ![Screenshot print da home](./img-readme/iPadPro.png)
 

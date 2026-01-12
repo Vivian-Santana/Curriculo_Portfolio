@@ -335,36 +335,30 @@ nav {
 }
 
 #contato {
+    .social-network {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 
-  p{
-    color: var(--cor-fonte);
+    li{
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    a{
+      color: var(--cor-terciaria);
+      text-decoration: none;
+    }
+
+    a:hover{
+      color: var(--cor-secundaria);
+    }
+
   }
 
-  li,
-  a {
-    display: inline;
-    list-style: none;
-    text-decoration: none;
-    margin-bottom: 0.5rem;
-
-  }
-
-  a:link,
-  a:visited {
-    color: var(--cor-terciaria);
-    text-decoration: none;
-  }
-
-  a:hover,
-  a:active {
-    color: var(--cor-secundaria);
-  }
-
-  .social-network {
-    margin-top: 2rem;
-    /* justify-content: space-evenly; */
-    gap: 2rem;
-  }
 }
 
 footer {
