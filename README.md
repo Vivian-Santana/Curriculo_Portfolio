@@ -12,6 +12,4 @@
 
 ![Screenshot print da home](./img-readme/web.png)
 
-![Screenshot print da home](./img-readme/iPadPro.png)
-
 ![Screenshot print da home](./img-readme/iPhone12.png)
