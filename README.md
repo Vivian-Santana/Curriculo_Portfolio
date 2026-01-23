@@ -8,8 +8,10 @@
 - Responsividade com Media Query
 - Animação com keyframes
 
----
 
-![Screenshot print da home](./img-readme/web.png)
 
-![Screenshot print da home](./img-readme/iPhone12.png)
+
+
+| | |
+|---|---|
+| ![Screenshot print da home](./img-readme/web.png) | ![Screenshot print da home](./img-readme/iPhone12.png) |
